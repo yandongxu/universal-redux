@@ -1,5 +1,5 @@
-const Koa = require('koa');
-const middlewares = require('./middlewares');
+import Koa from 'koa';
+import middlewares from './middlewares';
 
 const app = new Koa();
 
@@ -29,3 +29,5 @@ app.on('error', (err, ctx) => {
 });
 
 app.listen(3000, () => console.log('http://localhost:3000'));
+
+module.exports = app;
